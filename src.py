@@ -20,7 +20,7 @@ def binSearch (arr, low, high, size, target):
         else:
             return binSearch(arr, low, high - 1, size, target)
     print("not found")
-    return mid
+    return 0
 
 # calling the function
 binSearch(arr, low, high, size, target)
