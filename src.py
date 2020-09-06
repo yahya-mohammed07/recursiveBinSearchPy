@@ -1,13 +1,17 @@
 import math
 
-# the array needs to be sorted
-arr = [1,2,3,4,5,6,7,8,9,10]
-# assigning length to a local var to a void calling len
-size = len(arr)
-low = 0
-high = size - 1
-# the user enter the target to search
-target = int(input("enter a number to search: "))
+# driver function
+def main():
+    # the array needs to be sorted
+    arr = [1,2,3,4,5,6,7,8,9,10]
+    # assigning length to a local var to a void calling len
+    size = len(arr)
+    low = 0
+    high = size - 1
+    # the user enter the target to search
+    target = int(input("enter a number to search: "))
+    binSearch(arr,low, high, size, target)
+
 # the recursive bin search
 def binSearch (arr, low, high, size, target):
     mid = (int)(math.ceil(low + high) / 2)
@@ -23,4 +27,4 @@ def binSearch (arr, low, high, size, target):
     return 0
 
 # calling the function
-binSearch(arr, low, high, size, target)
+main()
